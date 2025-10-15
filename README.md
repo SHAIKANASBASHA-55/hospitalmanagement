@@ -1,131 +1,60 @@
-🏥 Hospital Management System
+# 🏥 Hospital Management System
 
-A full-stack web application built to streamline hospital operations including patient registration, doctor management, appointment scheduling, and authentication.
-The system features a React (Vite) frontend and a Spring Boot backend connected to a MySQL database.
+The Hospital Management System is a full-stack web application designed to simplify and automate hospital operations such as patient registration, doctor management, appointment scheduling, and secure authentication. It provides a centralized platform for administrators, doctors, and patients to manage hospital data efficiently.
 
-🚀 Features
-👨‍⚕️ Patient Module
+---
 
-Patient registration and login
+## 🚀 Features
 
-View and update profile
+- 👨‍⚕️ **Patient Management** – Add, update, and view patient details.  
+- 🧑‍⚕️ **Doctor Management** – Maintain doctor profiles and schedules.  
+- 📅 **Appointment Booking** – Schedule and manage appointments.  
+- 🔐 **User Authentication** – Secure login and registration for patients and doctors.  
+- 🏥 **Admin Dashboard** – Monitor all hospital operations in one place.  
 
-Book appointments with doctors
+---
 
-🧑‍⚕️ Doctor Module
+## 🛠️ Tech Stack
 
-Doctor registration and authentication
+| Layer | Technology |
+|--------|-------------|
+| **Frontend** | React (Vite), HTML, CSS, JavaScript |
+| **Backend** | Spring Boot |
+| **Database** | MySQL |
+| **Version Control** | Git & GitHub |
+| **Containerization** | Docker |
 
-View scheduled appointments
+---
 
-Update availability status
+## ⚙️ Installation and Setup
 
-🏢 Admin Module
+1️⃣ Clone the Repository
+git clone https://github.com/SHAIKANASBASHA-55/hospitalmanagement.git
 
-Manage patients and doctors
-
-Monitor hospital activities
-
-🔐 Authentication
-
-Secure login/signup using JWT tokens
-
-Role-based access control (Admin / Doctor / Patient)
-
-🏗️ Tech Stack
-Layer	Technology
-Frontend	React.js (Vite), HTML5, CSS3, Tailwind / Bootstrap
-Backend	Spring Boot (Java)
-Database	MySQL
-API Testing	Postman
-Deployment	Docker, GitHub, (Optional: Render / AWS / Azure)
-📂 Project Structure
-hospital-management/
-│
-├── hospital-frontend/     # React Vite frontend
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── App.jsx
-│   └── package.json
-│
-├── hospital-backend/      # Spring Boot backend
-│   ├── src/main/java/com/hospital/...
-│   ├── pom.xml
-│   └── application.properties
-│
-└── README.md
-
-⚙️ Installation & Setup
-🔹 Prerequisites
-
-Ensure you have the following installed:
-
-Node.js
-
-Java JDK 17+
-
-MySQL
-
-Maven
-
-Git
-
-🔹 Backend Setup
-# Clone backend repository
-git clone https://github.com/yourusername/hospital-backend.git
+2️⃣ Backend Setup
 cd hospital-backend
-
-# Configure MySQL in application.properties
-spring.datasource.url=jdbc:mysql://localhost:3306/hospitaldb
-spring.datasource.username=root
-spring.datasource.password=yourpassword
-
-# Run backend
 mvn spring-boot:run
 
-
-✅ The backend will start on http://localhost:8081
-
-🔹 Frontend Setup
-# Clone frontend repository
-git clone https://github.com/yourusername/hospital-frontend.git
+3️⃣ Frontend Setup
 cd hospital-frontend
-
-# Install dependencies
 npm install
-
-# Start the app
 npm run dev
-
-
-✅ The frontend will start on http://localhost:5173
 
 🔗 API Endpoints
 Method	Endpoint	Description
-POST	/auth/signup	Register new user
-POST	/auth/login	User login
-GET	/patients	Fetch all patients
-GET	/doctors	Fetch all doctors
-POST	/appointments	Book appointment
+POST	/auth/signup	Register a new user
+POST	/auth/login	Login and generate JWT token
+GET	/patients	Get all patients
+GET	/doctors	Get all doctors
+POST	/appointments	Book a new appointment
+
 🐳 Docker Setup (Optional)
-# Build and start containers
 docker-compose up --build
 
-# Stop containers
-docker-compose down
 
-📸 Screenshots (Optional)
+This will run both backend and frontend services in containers.
 
-Add screenshots here (Login Page, Dashboard, Appointments, etc.)
+👩‍💻 Developed By
 
-🧪 Testing
-
-You can test backend APIs using Postman or cURL.
-
-Example:
-
-curl -X POST http://localhost:8081/auth/login \
--H "Content-Type: application/json" \
--d '{"username":"admin","password":"admin123"}'
+SHAIKANASBASHA-55
+💡 Built with React, Spring Boot, and MySQL.
